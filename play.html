@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>便利サイト・遊び</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center; /* タイトルをセンタリング */
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0 0 20px; /* マージンを調整して一列に収める */
+    }
+    label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>閲覧したい項目を選択してください</h2>
+    
+    <select id="targetSite">
+      <option value="">選択してください</option>
+      <option value="https://proxyscrape.com/web-proxy">制限突破(proxy)</option>
+      <option value="http://2ch.sc/2ch.html">2ch(広告なし)</option>
+      <option value="https://kirimin.me/game/osero/">オセロ(友達対戦可能！)</option>
+      <option value="https://www.gadgety.net/shin/web/games/tetris.html">テトリス</option>
+      <option value=" https://syosetu.com/">他人の書いた小説が無料で読めるサイト│有名作品多数(narou)</option>
+      <option value=" https://www.y2mate.com/jp222/youtube-mp3">Youtubeの音源・動画を簡単にDLできるサイト</option>
+    </select>
+    
+    <button onclick="redirectToSelectedSite()">決定</button>
+  </div>
+  
+  <script>
+    function redirectToSelectedSite() {
+      var selectElement = document.getElementById("targetSite");
+      var selectedValue = selectElement.value;
+      
+      if (selectedValue) {
+        window.location.href = selectedValue;
+      }
+    }
+  </script>
+</body>
+</html>
