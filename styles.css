@@ -214,4 +214,7 @@ footer {
   color: #fff;
 }
 
-
+/* styles.css */
+.nav-link:hover {
+  background-color: lightgray;
+}
